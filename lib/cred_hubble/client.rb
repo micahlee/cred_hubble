@@ -219,7 +219,7 @@ module CredHubble
     def client_cert
       return unless client_cert_path
 
-      OpenSSL::X509::Certificate.new(File.read(client_cert_path))
+      File.read(client_cert_path)
     end
 
     def client_key
